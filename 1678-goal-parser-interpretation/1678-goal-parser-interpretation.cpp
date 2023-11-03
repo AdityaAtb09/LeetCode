@@ -4,22 +4,22 @@ public:
         
         string ans = "";
         
-        for(int i=0; i<command.length(); i++)
+        for(int i=0; i<command.length();)
         {
             if(command[i] == 'G')
             {
                 ans += "G";
+                i++;
             }
-            if(command[i] == '(')
+            else if(command[i] == '(' && command[i+1] == ')')
             {
-                if(command[i+1] == ')')
-                {
-                    ans += "o";
-                }
-                else
-                {
-                    ans += "al";
-                }
+                ans += 'o';
+                i += 2;
+            }
+            else
+            {
+                ans += "al";
+                i += 4;
             }
         }
         
