@@ -4,7 +4,7 @@ public:
         
         if(word.find(ch) != string::npos)
         {
-            size_t n = word.find(ch);
+            int n = word.find(ch);
             reverse(word.begin(), word.begin()+n+1);
         }
         
