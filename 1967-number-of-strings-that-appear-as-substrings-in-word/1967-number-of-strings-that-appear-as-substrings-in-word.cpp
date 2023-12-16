@@ -5,7 +5,7 @@ public:
         
         for(auto it : patterns)
         {
-            if(word.find(it) != string::npos)
+            if(word.find(it) != -1)
             {
                 cnt++;
             }
