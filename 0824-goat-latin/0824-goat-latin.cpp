@@ -36,26 +36,22 @@ public:
             
             if(isVowel(t[0]))
             {
-                // t.push_back('m');
-                // t.push_back('a');
-                t += "ma";
+                t.push_back('m');
+                t.push_back('a');
             }
             else
             {
                 char u = t[0];
                 t.erase(0, 1);
-                // t.push_back(u);
-                // t.push_back('m');
-                // t.push_back('a');
-                t += u;
-                t += "ma";
+                t.push_back(u);
+                t.push_back('m');
+                t.push_back('a');
             }
             
             int j = i+1;
             while(j != 0)
             {
-                // t.push_back('a');
-                t += 'a';
+                t.push_back('a');
                 j--;
             }
             
